@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Pyaari Lisa</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    h1 {
+        color: #e91e63;
+        margin-bottom: 10px;
+    }
+
+    .urdu {
+        font-size: 26px;
+        direction: rtl;
+        line-height: 1.8;
+        color: #4a148c;
+        margin: 20px 0;
+    }
+
+    .english {
+        display: none;
+        font-size: 22px;
+        line-height: 1.6;
+        color: #333;
+        margin: 20px 0;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        background: #e91e63;
+        color: white;
+        cursor: pointer;
+        margin: 15px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #c2185b;
+    }
+
+    .photo-box {
+        margin: 25px auto;
+        width: 250px;
+        height: 300px;
+        border: 3px dashed #e91e63;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        font-size: 16px;
+    }
+
+    .questions {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .questions h2 {
+        color: #d81b60;
+    }
+
+    .questions label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .questions input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+
+    .footer-msg {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #880e4f;
+        font-weight: bold;
+    }
+
+    /* Confetti */
+    .confetti {
+        position: fixed;
+        top: -10px;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        animation: fall 5s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Confetti -->
+<script>
+    for (let i = 0; i < 80; i++) {
+        let confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor =
+            ["#e91e63", "#ffeb3b", "#4caf50", "#2196f3"][Math.floor(Math.random() * 4)];
+        confetti.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(confetti);
+    }
+</script>
+
+<div class="container">
+
+    <h1>🎉 Happy Birthday 🎂</h1>
+
+    <!-- Urdu Section -->
+    <div class="urdu" id="urduText">
+        سالگرہ مبارک ہو میری پیاری لیزا ❤️  
+        تم میری زندگی کا سب سے خوبصورت تحفہ ہو۔  
+        آج تمہارا سب سے خاص دن ہے، میری جان۔  
+        میں واقعی خود کو خوش نصیب سمجھتا ہوں کہ تم میری زندگی میں ہو۔  
+        تم میرے دل کے بہت قریب ہو اور میرے لیے بہت خاص ہو۔
+    </div>
+
+    <!-- English Section -->
+    <div class="english" id="englishText">
+        Happy Birthday my dear Lisa ❤️  
+        You are the most beautiful gift of my life.  
+        Today is your best and most special day, my love.  
+        I truly feel blessed that you are in my life.  
+        You are very close to my heart and extremely special to me.
+    </div>
+
+    <button onclick="toggleLanguage()">Translate / ترجمہ</button>
+
+
+    
+
+    <div class="footer-msg">
+        💕 You are so much special to me 💕
+    </div>
+
+</div>
+
+<script>
+    function toggleLanguage() {
+        let urdu = document.getElementById("urduText");
+        let english = document.getElementById("englishText");
+
+        if (urdu.style.display === "none") {
+            urdu.style.display = "block";
+            english.style.display = "none";
+        } else {
+            urdu.style.display = "none";
+            english.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
